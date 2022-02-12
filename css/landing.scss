@@ -349,6 +349,44 @@ nav {
         color: #000;
         font-weight: 500;
       }
+
+      .cta-button {
+        background: #fff;
+        border: 0.02em solid rgba($color: #000000, $alpha: 0.3);
+        color: $purple-color;
+        font-weight: 900;
+
+        &:hover {
+          background: $purple-color;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+/* Footer */
+footer {
+  background: #fbf8f3;
+  padding: 2em $margin-side;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  .content {
+    .content-list {
+      margin-top: 1em;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+    }
+
+    p {
+      font-weight: 500;
+      a {
+        text-decoration: none;
+        color: rgba($color: #000000, $alpha: 0.7);
+      }
     }
   }
 }
