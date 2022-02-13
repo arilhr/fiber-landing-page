@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700;900&display=swap");
+
+$margin-side: 10%;
+$purple-color: #4d13d1;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Inter";
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2.1em;
+  margin: 0;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.4em;
+  text-decoration: none;
+  color: #000;
+}
+
+.main-container {
+  min-height: 100vh;
+  .featured-section {
+    display: none;
+  }
+}
+
+.main-content {
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: $margin-side;
+    gap: 2em;
+  }
+
+  .sign-up-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    .input-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+    }
+
+    label {
+      font-weight: 700;
+      font-size: 1em;
+    }
+
+    input {
+      padding: 1em;
+      border: 0.1em solid rgba($color: #000000, $alpha: 0.3);
+      border-radius: 0.3em;
+    }
+
+    .agree-terms {
+      display: flex;
+      gap: 1em;
+
+      input {
+        width: 3em;
+        padding: 0;
+      }
+
+      label {
+        font-weight: 500;
+        font-size: 1em;
+
+        a {
+          color: $purple-color;
+          font-weight: 900;
+        }
+      }
+    }
+
+    .submit-button {
+      font-weight: 700;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 0.3em;
+      padding: 1em 0;
+      color: #fff;
+      background-color: $purple-color;
+      transition: all ease-in-out 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.01);
+      }
+    }
+  }
+
+  .have-account {
+    font-weight: 500;
+    align-self: center;
+
+    a {
+      text-decoration: none;
+      color: $purple-color;
+      font-weight: 400;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-container {
+    display: flex;
+
+    .main-content {
+      flex: 1;
+    }
+
+    .featured-section {
+      display: block;
+      flex: 1;
+      background: radial-gradient(
+        rgba($color: $purple-color, $alpha: 0.85),
+        rgba($color: $purple-color, $alpha: 1)
+      );
+
+      .container {
+        margin: 15%;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+      }
+
+      .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+
+        .image {
+          img {
+            max-width: 100%;
+          }
+        }
+
+        .title {
+          font-size: 2em;
+          color: #fff;
+        }
+
+        .description {
+          color: #fff;
+          text-align: center;
+          line-height: 1.6em;
+        }
+      }
+
+      .content-nav {
+        display: flex;
+        gap: 0.5em;
+
+        .circle {
+          width: 0.6em;
+          height: 0.6em;
+          background: #fff;
+          border-radius: 50%;
+          opacity: 0.6;
+
+          &.active {
+            opacity: 1;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

@@ -9,6 +9,10 @@ $purple-color: #4d13d1;
   font-family: "Inter";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   position: relative;
